@@ -169,6 +169,8 @@ var index;
 
         function Remove(id)
         {
+            if (confirm("Are you sure"))
+            {
             for (var i=0;i<Employees.length;i++)
             if (Employees[i].ID == id)
             {Employees.splice(i,1);
@@ -182,7 +184,7 @@ var index;
                 }
                 document.getElementById('RowID').value="";
                 emp_id = "";
-
+            }
         }
 
 
