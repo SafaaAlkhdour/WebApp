@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Employees Managements
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+
+    <body onload="FillList()"  >
+ 
+        <div id="mainPage" >
+            <h1>Registerd Employees</h1>
+            <hr>
+            <br/>
+            <form method="GET" action="" >
+                <table border="3">
+                    <thead>
+                       <tr>
+                        <th>Name</th> <th>Birthdate</th></tr>
+                    </thead>
+
+                    <tbody id="employeeList">
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" align="right">
+                                    <input type="hidden" id="RowID" value="">
+                                    <input type="button" value="Add" class="btn" onclick="ShowHideSection('Add')">
+                                    <input type="button" value="Edit" class="btn" id="edit_btn" onclick="ShowHideSection(document.getElementById('RowID').value)" hidden>
+                                    <input type="button" value="Delete" class="btn" id="delete_btn" onclick="Remove(document.getElementById('RowID').value)" hidden > 
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+            </form>
+        </div>
+
+            
+    <form method="post" action="" id="infoForm" style="display: none;">
+        <fieldset>
+            <legend>Employee Information</legend>
+            <br />
+            You must fill all information
+        <table cellspacing="10" >
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" name="Name" id="name" class="box" required="required" maxlength="100" 
+                    minlength="1"></td>
+            </tr>
+            <tr>
+                <td><label for="natId">NationalID:</label></td>
+                <td><input type="number" name="NationalID" id="natId" class="box" required="required" min="1" max="1000000000"></td>
+            </tr>
+            <tr>
+                <td><label for="height">Height:</label></td>
+                <td><input type="number" step="0.1" name="Height" id="height" class="box" required="required"
+                    min="1" max="300"></td>
+            </tr>
+            <tr>
+                <td><label for="weight">Weight:</label></td>
+                <td><input type="number" step="0.1" name="Weight" id="weight" class="box" required="required" min="1" max="400"></td>
+            </tr>
+            <tr>
+                <td><label for="bd">Birthdate:</label></td>
+                <td><input type="date" name="" id="bd" class="box" required="required"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="button" name="" class="btn" value="Submit"  onclick="Update() , saveEmployee()">
+                    <input type="button" name="" class="btn" value="Cancel"  onclick="ShowHideSection('mnPg')" formnovalidate>
+                </td>
+            </tr>
+        </table>
+    
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+body { background-color: black ; margin: auto; width: 75%; }
+
+h1 { text-align: center;
+color: BurlyWood  ;
+font-size: 50pt ; }
+
+fieldset {width: 25%; }
+
+legend {font-weight: bold;}
+
+form {  color: RosyBrown; font-size: 20pt;  width: 75%; margin: auto;}
+
+.box {background-color: AntiqueWhite; width: 100%;}
+
+table { width: 100%; }
+tfoot {border-color: black;}
+
+.btn { background-color: BurlyWood ; color: black ; height: 40px; font-size: 18pt; font-weight: bold ; width: 100px;}
